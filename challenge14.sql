@@ -8,7 +8,6 @@ CREATE TABLE Mahasiswa
   nim VARCHAR(14) PRIMARY KEY NOT NULL,
   nama CHAR(15) NOT NULL,
   alamat VARCHAR(25) NOT NULL,
-  jenis_kelamin CHAR(7) NOT NULL,
   umur SMALLINT(4) NOT NULL,
   id_jurusan VARCHAR(14) NOT NULL,
   FOREIGN KEY (id_jurusan) REFERENCES Jurusan(id_jurusan)
