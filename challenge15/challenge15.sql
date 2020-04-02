@@ -22,6 +22,23 @@ INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(04,"n03","mk002",
 INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(05,"n03","mk005","d52","C");
 INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(06,"n03","mk004","d52","C");
 INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(07,"n01","mk002","d51","A");
+INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(08,"n01","mk005","d51","A");usan(id_jurusan,nama_jurusan)VALUES ("j02",'TI');
+INSERT into Jurusan(id_jurusan,nama_jurusan)VALUES ("j03",'disgn');
+
+INSERT into Dosen(id_dosen,nama_dosen)VALUES ("d52",'Joko');
+INSERT into Dosen(id_dosen,nama_dosen)VALUES ("d51",'Rubi');
+
+INSERT into Mahasiswa(nim,nama,alamat,id_jurusan,umur)VALUES ("n01",'adi','jakarta','j02',21);
+INSERT into Mahasiswa(nim,nama,alamat,id_jurusan,umur)VALUES ("n02",'bayu','bogor','j01',19);
+INSERT into Mahasiswa(nim,nama,alamat,id_jurusan,umur)VALUES ("n03",'budi','bekasi','j01',19);
+
+INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(01,"n01","mk004","d51","A");
+INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(02,"n01","mk001","d52","B");
+INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(03,"n02","mk004","d51","C");
+INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(04,"n03","mk002","d51","B");
+INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(05,"n03","mk005","d52","C");
+INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(06,"n03","mk004","d52","C");
+INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(07,"n01","mk002","d51","A");
 INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(08,"n01","mk005","d51","A");
 --1)
   SELECT * FROM Mahasiswa NATURAL JOIN Jurusan WHERE Jurusan.id_jurusan = Mahasiswa.id_jurusan;

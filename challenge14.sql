@@ -24,7 +24,7 @@ CREATE TABLE Mata_Kuliah
 CREATE TABLE Dosen
 (
   id_dosen VARCHAR(14) PRIMARY KEY NOT NULL,
-  nama_dosen CHAR(25) NOT NULL,
+  nama_dosen CHAR(25) NOT NULL
 );
 
 CREATE TABLE kontrak
