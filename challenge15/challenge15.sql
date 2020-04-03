@@ -22,7 +22,8 @@ INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(04,"n03","mk002",
 INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(05,"n03","mk005","d52","C");
 INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(06,"n03","mk004","d52","C");
 INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(07,"n01","mk002","d51","A");
-INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(08,"n01","mk005","d51","A");usan(id_jurusan,nama_jurusan)VALUES ("j02",'TI');
+INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(08,"n01","mk005","d51","A");
+INSERT into Jurusan(id_jurusan,nama_jurusan)VALUES ("j02",'TI');
 INSERT into Jurusan(id_jurusan,nama_jurusan)VALUES ("j03",'disgn');
 
 INSERT into Dosen(id_dosen,nama_dosen)VALUES ("d52",'Joko');
@@ -51,6 +52,6 @@ INSERT into kontrak(id_kontrak,nim,id_mk,id_dosen,nilai)VALUES(08,"n01","mk005",
 --5)
   SELECT nama,umur,nilai,nama_kuliah,nama_dosen FROM kontrak NATURAL JOIN Mahasiswa NATURAL JOIN Mata_Kuliah NATURAL JOIN Dosen WHERE nama_kuliah = "data mining"; 
 --6)
-   SELECT nama_dosen,count(DISTINCT nama)total_mahasiswa FROM kontrak NATURAL JOIN Dosen GROUP BY id_dosen;
+   SELECT nama_dosen,count(DISTINCT nama)total_mahasiswa FROM kontrak NATURAL JOIN Dosen NATURAL JOIN mahasiswa GROUP BY id_dosen;
 --8)
   SELECT * FROM kontrak NATURAL JOIN Mahasiswa NATURAL JOIN Dosen NATURAL JOIN Mata_Kuliah NATURAL JOIN Jurusan WHERE nilai > "B";
